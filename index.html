@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Emoji Smuggler</title>
+
+<style>
+body{
+font-family:Arial;
+background:#0f172a;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+textarea{
+width:80%;
+height:90px;
+margin:10px;
+padding:10px;
+border-radius:8px;
+border:none;
+}
+
+input{
+padding:10px;
+border-radius:8px;
+border:none;
+margin:10px;
+}
+
+button{
+padding:10px 20px;
+margin:10px;
+border:none;
+border-radius:8px;
+background:#22c55e;
+color:white;
+cursor:pointer;
+}
+
+button:hover{
+background:#16a34a;
+}
+
+#result{
+margin-top:20px;
+font-size:18px;
+word-wrap:break-word;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🕵️ Emoji Smuggler</h1>
+<p>Hide secret messages inside emojis or text</p>
+
+<h3>Visible Text / Emoji</h3>
+<textarea id="cover">😀 Hello there!</textarea>
+
+<h3>Secret Message</h3>
+<textarea id="secret"></textarea>
+
+<h3>Password</h3>
+<input id="password" placeholder="optional password">
+
+<br>
+
+<button onclick="encode()">Encode Message</button>
+<button onclick="decode()">Decode Message</button>
+
+<div id="result"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
